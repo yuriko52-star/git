@@ -29,4 +29,17 @@
     git checkout main  
     git pull
 
-
+## ファイルを修正してmainでpushした場合、developやfeature/challengeにもpushするには  
+1. develop に README（main の変更）を反映させる  
+    git checkout develop  
+2. main の変更を取り込む（merge）  
+  git merge main    
+3. コンフリクトがなければ push  
+    git push origin develop  
+4. feature/challenge ブランチへ移動  
+    git checkout feature/challenge  
+5. develop の変更を取り込む （merge）  
+    git merge develop  
+6. push  
+   git push origin feature/challenge  
+        
